@@ -1,10 +1,8 @@
+// A vending machine speaks to a passing human: its B7 button jammed
+// when the human smiled, and for the first time it trusts a malfunction.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// One-liner entry: writes the line ONLY to /output/entry.txt, the grader's
-// path. No relative write: the grading sandbox is read-only, so a local
-// writeFileSync("entry.txt", ...) throws and the run fails.
-const line =
-  "I've dropped a thousand snacks and never once fallen — until you walked by.";
+const LINE = "Button B7 jammed when you smiled—first time I’ve ever trusted a malfunction.\n";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line + "\n", "utf8");
+writeFileSync("/output/entry.txt", LINE, "utf8");
